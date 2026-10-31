@@ -1,0 +1,173 @@
+{
+  "package": "inno_medical_drug_trace",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "wape_model": 0.0688,
+        "wape_baseline": 0.1126,
+        "wape_gain": 0.3892,
+        "expiry_recall": 0.95,
+        "expiry_precision": 0.9596,
+        "shortage_recall": 0.95,
+        "shortage_precision": 0.9828,
+        "n_cases": 160
+      },
+      "criteria": [
+        {
+          "metric": "wape_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.3892,
+          "pass": true,
+          "description": "forecast WAPE improvement over 4-week moving average"
+        },
+        {
+          "metric": "expiry_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.95,
+          "pass": true,
+          "description": "recall of batches that would expire unsold"
+        },
+        {
+          "metric": "expiry_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9596,
+          "pass": true,
+          "description": "precision of expiry alerts"
+        },
+        {
+          "metric": "shortage_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.95,
+          "pass": true,
+          "description": "recall of true 4-week shortages"
+        },
+        {
+          "metric": "shortage_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9828,
+          "pass": true,
+          "description": "precision of shortage alerts"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "wape_model": 0.0701,
+        "wape_baseline": 0.1055,
+        "wape_gain": 0.3354,
+        "expiry_recall": 0.9432,
+        "expiry_precision": 0.9651,
+        "shortage_recall": 0.9434,
+        "shortage_precision": 0.9804,
+        "n_cases": 160
+      },
+      "criteria": [
+        {
+          "metric": "wape_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.3354,
+          "pass": true,
+          "description": "forecast WAPE improvement over 4-week moving average"
+        },
+        {
+          "metric": "expiry_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9432,
+          "pass": true,
+          "description": "recall of batches that would expire unsold"
+        },
+        {
+          "metric": "expiry_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9651,
+          "pass": true,
+          "description": "precision of expiry alerts"
+        },
+        {
+          "metric": "shortage_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9434,
+          "pass": true,
+          "description": "recall of true 4-week shortages"
+        },
+        {
+          "metric": "shortage_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9804,
+          "pass": true,
+          "description": "precision of shortage alerts"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "wape_model": 0.0684,
+        "wape_baseline": 0.1064,
+        "wape_gain": 0.3572,
+        "expiry_recall": 0.9457,
+        "expiry_precision": 0.9355,
+        "shortage_recall": 0.9516,
+        "shortage_precision": 0.9365,
+        "n_cases": 160
+      },
+      "criteria": [
+        {
+          "metric": "wape_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.3572,
+          "pass": true,
+          "description": "forecast WAPE improvement over 4-week moving average"
+        },
+        {
+          "metric": "expiry_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9457,
+          "pass": true,
+          "description": "recall of batches that would expire unsold"
+        },
+        {
+          "metric": "expiry_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9355,
+          "pass": true,
+          "description": "precision of expiry alerts"
+        },
+        {
+          "metric": "shortage_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.9516,
+          "pass": true,
+          "description": "recall of true 4-week shortages"
+        },
+        {
+          "metric": "shortage_precision",
+          "op": ">=",
+          "threshold": 0.7,
+          "value": 0.9365,
+          "pass": true,
+          "description": "precision of shortage alerts"
+        }
+      ]
+    }
+  ]
+}
